@@ -15,7 +15,7 @@ echo "web_$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)"
 ```
 ```
 //第一次初始化运行这个。
-docker run -it \
+sudo docker run -it \
   --name ctyun \
   -e APP_USER="你的账号" \
   -e APP_PASSWORD='你的密码' \
@@ -26,7 +26,7 @@ docker run -it \
 
 ```
 //第一次运行不要加-d
-docker run -d \
+sudo docker run -d \
   --name ctyun \
   -e APP_USER="你的账号" \
   -e APP_PASSWORD='你的密码' \
